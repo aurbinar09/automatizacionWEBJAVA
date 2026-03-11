@@ -12,4 +12,5 @@ import net.serenitybdd.cucumber.CucumberWithSerenity;
         tags = "@HappyPath"
 )
 public class CucumberRunnerTest {
+
 }
