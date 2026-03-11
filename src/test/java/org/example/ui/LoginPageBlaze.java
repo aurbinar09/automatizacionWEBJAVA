@@ -17,4 +17,6 @@ public class LoginPageBlaze {
 
     public static final Target INP_PASSWORDL = Target.the("Contraseña")
             .located(By.id("loginpassword"));
+    public  static final Target BTN_LOGOUT = Target.the("Boton Salir")
+            .located(By.id("logout2"));
 }

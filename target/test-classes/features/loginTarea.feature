@@ -25,14 +25,7 @@ Feature: Trabajo de FLUJOS
       | usuarioqwer | pass123  |
 
   @Logout @HappyPath
-  Scenario Outline: Logout de plataforma
-    Given el usuario está en la página de inicio
-    And el usuario selecciona el boton de login
-    And ingresa un nombre de usuario "<username>" y contraseña "<password>"
-    When el usuario selecciona el boton de logearse
-    Then se realiza el logeo de manera correcta
-    Then el usuario procede a dar logout
-
-    Examples:
-      | username    | password |
-      | Carlos      | 123456  |
+  Scenario: Cierre de sesión exitoso
+    Given el usuario está autenticado
+    When selecciona Cerrar sesión
+    Then la sesión se cierra
