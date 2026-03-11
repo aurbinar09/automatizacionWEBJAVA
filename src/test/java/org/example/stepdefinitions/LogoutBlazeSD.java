@@ -35,7 +35,7 @@ public class LogoutBlazeSD {
         String base_url = System.getProperty("base_url", "https://www.demoblaze.com/");
         usuario.attemptsTo(OpenPage.atUrl(base_url));
         usuario.attemptsTo(Click.on(LoginPageBlaze.BTN_LOGIN));
-        usuario.attemptsTo(LogoutTaskBlaze.perform("Jose13","123456"));
+        usuario.attemptsTo(LogoutTaskBlaze.perform("ADEL","123456"));
     }
 
     @When("selecciona Cerrar sesión")
