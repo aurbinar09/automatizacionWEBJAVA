@@ -11,7 +11,9 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import net.serenitybdd.screenplay.ensure.Ensure;
 import net.thucydides.core.webdriver.ThucydidesWebDriverSupport;
+import org.example.questions.BlazeDemoScreenData;
 import org.example.tasks.OpenPage;
 import org.example.ui.HomePageBlaze;
 import org.example.ui.LoginPageBlaze;
@@ -55,6 +57,8 @@ public class RegistrarBlazeSD {
 
     @Then("se realiza el registro de manera exitosa")
     public void seRealizaElRegistroDeManeraExitosa() {
-        System.out.println("exitoso");
+        usuario.attemptsTo(
+                Ensure.that(BlazeDemoScreenData.isTitleVisible()).isTrue()
+        );
     }
 }

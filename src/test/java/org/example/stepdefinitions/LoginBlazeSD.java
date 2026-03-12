@@ -13,6 +13,7 @@ import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.ensure.Ensure;
 import net.thucydides.core.webdriver.ThucydidesWebDriverSupport;
+import org.example.questions.BlazeDemoScreenData;
 import org.example.questions.HomeSauceDemoScreenData;
 import org.example.tasks.LoginTask;
 import org.example.tasks.LoginTaskBlaze;
@@ -56,7 +57,9 @@ public class LoginBlazeSD {
 
     @Then("se realiza el logeo de manera correcta")
     public void seRealizaElLogeoDeManeraCorrecta() {
-        System.out.println("exitoso");
+        usuario.attemptsTo(
+                Ensure.that(BlazeDemoScreenData.isTitleVisible()).isTrue()
+        );
     }
 
 

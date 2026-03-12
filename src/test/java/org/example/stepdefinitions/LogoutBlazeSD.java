@@ -11,7 +11,9 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
+import net.serenitybdd.screenplay.ensure.Ensure;
 import net.thucydides.core.webdriver.ThucydidesWebDriverSupport;
+import org.example.questions.BlazeDemoScreenData;
 import org.example.tasks.LoginTaskBlaze;
 import org.example.tasks.LogoutTaskBlaze;
 import org.example.tasks.OpenPage;
@@ -50,6 +52,8 @@ public class LogoutBlazeSD {
 
     @Then("la sesión se cierra")
     public void laSesiónSeCierra() {
-        System.out.printf("Sesión cerrada");
+        usuario.attemptsTo(
+                Ensure.that(BlazeDemoScreenData.isTitleVisible()).isTrue()
+        );
     }
 }

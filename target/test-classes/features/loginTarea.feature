@@ -10,7 +10,7 @@ Feature: Trabajo de FLUJOS
 
     Examples:
       | username    | password |
-      | Jose13      | 123456  |
+      | ADEL      | 123456  |
 
   @RegistrarUsuario @HappyPath
   Scenario Outline: Registrar de manera existosa a un usuario con credenciales validas
@@ -22,7 +22,7 @@ Feature: Trabajo de FLUJOS
 
     Examples:
       | username    | password |
-      | usuarioqwer | pass123  |
+      | Usuarioprueba2 | pass123  |
 
   @Logout @HappyPath
   Scenario: Cierre de sesión exitoso

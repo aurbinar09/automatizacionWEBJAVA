@@ -7,6 +7,9 @@ import net.serenitybdd.screenplay.targets.Target;
 @DefaultUrl("https://www.demoblaze.com/")
 public class HomePageBlaze {
 
+    public static final Target TITLE_BLAZE_DEMO = Target.the("Boton para hacer el registro")
+            .locatedBy("//a[text()='CATEGORIES']");
+
     public static final Target BTN_SIGN_UP = Target.the("Boton para hacer el registro")
             .located(By.id("signin2"));
 
